@@ -1,7 +1,7 @@
 let running = false
 let startTime = 0
 let elapsed = 0
-let tenth = 0
+let hundredth = 0
 input.onButtonPressed(Button.A, function () {
     if (!(running)) {
         running = true
@@ -11,10 +11,10 @@ input.onButtonPressed(Button.A, function () {
         running = false
         elapsed = control.millis() - startTime
         // 0.1秒単位で表示
-        tenth = Math.round(elapsed / 10) / 100
+        hundredth = Math.round(elapsed / 10) / 100
         basic.clearScreen()
         basic.pause(100)
-        basic.showNumber(tenth)
+        basic.showNumber(hundredth)
     }
 })
 input.onButtonPressed(Button.B, function () {
